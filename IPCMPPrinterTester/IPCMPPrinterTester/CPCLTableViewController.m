@@ -23,11 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    samples = @[@"Font Type Test", @"Barcode 1D Test", @"Set Magnify Test", @"Barcode 2D Test", @"Image Test", @"Font Test", @"Concat Test", @"Multiline Test", @"Printer Status", @"Disconnect"];
+    samples = @[@"Font Type Test", @"Barcode 1D Test", @"Set Magnify Test", @"Barcode 2D Test", @"Image Test", @"Concat Test", @"Multiline Test", @"Printer Status", @"Disconnect"];
     
     if (connType == CONN_BT) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusCheckReceived:) name:EADSessionDataReceivedNotification object:nil];
         [[EAAccessoryManager sharedAccessoryManager] registerForLocalNotifications];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [cpclPrinter closePort];
+    
+    if (connType == CONN_BT) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:EADSessionDataReceivedNotification object:nil];
     }
 }
 
@@ -41,13 +49,7 @@
 }
 
 - (void)disconnect {
-    [cpclPrinter closePort];
-    
-    if (connType == CONN_BT) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:EADSessionDataReceivedNotification object:nil];
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Print Samples
@@ -65,23 +67,6 @@
     [cpclPrinter printCPCLText:0 withFontType:5 withFontSize:0 withPrintX:1 withPrintY:150 withData:@"ABCD1234" withCount:0];
     [cpclPrinter printCPCLText:0 withFontType:6 withFontSize:0 withPrintX:1 withPrintY:200 withData:@"ABCD1234" withCount:0];
     [cpclPrinter printCPCLText:0 withFontType:7 withFontSize:0 withPrintX:1 withPrintY:250 withData:@"ABCD1234" withCount:0];
-    
-    [cpclPrinter printForm];
-}
-
-- (void)fontTest
-{
-    [cpclPrinter setForm:0 withResX:200 withResY:200 withLabelHeight:406 withQuantity:1];
-    [cpclPrinter setMedia:CPCL_CONTINUOUS];
-    //[cpclPrinter setMedia:CPCL_LABEL];
-    
-    [cpclPrinter setEncoding:0x8000940];
-    
-    [cpclPrinter printCPCLText:CPCL_0_ROTATION withFontType:0 withFontSize:0 withPrintX:1 withPrintY:1 withData:@"FONT-0-0" withCount:0];
-    [cpclPrinter printCPCLText:CPCL_0_ROTATION withFontType:0 withFontSize:1 withPrintX:1 withPrintY:50 withData:@"FONT-0-1" withCount:0];
-    [cpclPrinter printCPCLText:CPCL_0_ROTATION withFontType:4 withFontSize:0 withPrintX:1 withPrintY:100 withData:@"FONT-4-0" withCount:0];
-    [cpclPrinter printCPCLText:CPCL_0_ROTATION withFontType:4 withFontSize:1 withPrintX:1 withPrintY:150 withData:@"FONT-4-1" withCount:0];
-    [cpclPrinter printCPCLText:CPCL_0_ROTATION withFontType:4 withFontSize:2 withPrintX:1 withPrintY:260 withData:@"4-2" withCount:0];
     
     [cpclPrinter printForm];
 }
@@ -390,18 +375,15 @@
             [self imageTest];
             break;
         case 5:
-            [self fontTest];
-            break;
-        case 6:
             [self concatTest];
             break;
-        case 7:
+        case 6:
             [self multiLineTest];
             break;
-        case 8:
+        case 7:
             [self printerStatus];
             break;
-        case 9:
+        case 8:
             [self disconnect];
             break;
         default:

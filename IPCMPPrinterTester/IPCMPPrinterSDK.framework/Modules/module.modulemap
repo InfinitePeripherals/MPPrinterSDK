@@ -1,0 +1,6 @@
+framework module IPCMPPrinterSDK {
+  umbrella header "IPCMPPrinterSDK.h"
+
+  export *
+  module * { export * }
+}

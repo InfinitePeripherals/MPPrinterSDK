@@ -18,6 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Register developer key with InfineaSDK. This is a required step that allows the use of IPCMPPrinterSDK functions.
     [[IPCIQ registerIPCIQ] setDeveloperKey:ipcDevKey];
     
     return YES;

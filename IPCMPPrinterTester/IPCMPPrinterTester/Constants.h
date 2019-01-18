@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, CONNECTION_TYPE) {
     CONN_WIFI
 };
 
+// Paste your developer key here. Contact IPC if you do not have a developer key yet.
 #define ipcDevKey @"your_key"
 
-#endif /* Constants_h */
+#endif

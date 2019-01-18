@@ -31,6 +31,14 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [zplPrinter closePort];
+    
+    if (connType == CONN_BT) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:EADSessionDataReceivedNotification object:nil];
+    }
+}
+
 - (id)initWithZPLPrinter:(IPCZPLPrinter *)printer withConnection:(CONNECTION_TYPE)connection {
     if (self = [super init]) {
         zplPrinter = printer;
@@ -41,13 +49,7 @@
 }
 
 - (void)disconnect {
-    [zplPrinter closePort];
-    
-    if (connType == CONN_BT) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:EADSessionDataReceivedNotification object:nil];
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Print Samples

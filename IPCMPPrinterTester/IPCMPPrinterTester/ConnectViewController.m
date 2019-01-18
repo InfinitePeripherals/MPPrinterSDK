@@ -76,7 +76,7 @@
         NSLog(@"Connection Established");
         
         CPCLTableViewController *sampleView = [[CPCLTableViewController alloc] initWithCPCLPrinter:cpclPrinter withConnection:connType];
-        [self presentViewController:sampleView animated:YES completion:nil];
+        [self.navigationController pushViewController:sampleView animated:YES];
     }
     else if (errCode == -3) {
         NSLog(@"ERROR: Invalid device");
@@ -102,7 +102,7 @@
         NSLog(@"Connection Established");
         
         ESCPOSTableViewController *sampleView = [[ESCPOSTableViewController alloc] initWithESCPOSPrinter:escposPrinter withConnection:connType];
-        [self presentViewController:sampleView animated:YES completion:nil];
+        [self.navigationController pushViewController:sampleView animated:YES];
     }
     else if (errCode == -3) {
         NSLog(@"ERROR: Invalid device");
@@ -128,7 +128,7 @@
         NSLog(@"Connection Established");
         
         ZPLTableViewController *sampleView = [[ZPLTableViewController alloc] initWithZPLPrinter:zplPrinter withConnection:connType];
-        [self presentViewController:sampleView animated:YES completion:nil];
+        [self.navigationController pushViewController:sampleView animated:YES];
     }
     else if (errCode == -3) {
         NSLog(@"ERROR: Invalid device");
