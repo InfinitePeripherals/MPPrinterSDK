@@ -14,7 +14,6 @@
 		4230EEC420DB0E8000FB8C0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4230EEC320DB0E8000FB8C0B /* main.m */; };
 		423493E82118CA930088C2F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423493E72118CA930088C2F2 /* CoreLocation.framework */; };
 		4258CC6A20E14D2000E47038 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4258CC6920E14D2000E47038 /* ConnectViewController.m */; };
-		42AB95BC21F17DC200BFA6B5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42AB95BB21F17DC200BFA6B5 /* README.txt */; };
 		42B7CFD320E52F17006154F9 /* ZPLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B7CFD220E52F17006154F9 /* ZPLTableViewController.m */; };
 		42BEF5E820E6C1E70057456D /* CPCLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BEF5E720E6C1E70057456D /* CPCLTableViewController.m */; };
 		42BEF5EC20E6CBC10057456D /* ESCPOSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BEF5EB20E6CBC10057456D /* ESCPOSTableViewController.m */; };
@@ -23,6 +22,7 @@
 		42C4F6E32114303F004311F6 /* sample_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42C4F6DF2114303F004311F6 /* sample_2.jpg */; };
 		42C4F6E42114303F004311F6 /* sample_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42C4F6E02114303F004311F6 /* sample_3.jpg */; };
 		42D6D96A2177CD1800F773B1 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D6D9692177CD1800F773B1 /* ExternalAccessory.framework */; };
+		42E8510C222DE0DB004475A2 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42E8510B222DE0DB004475A2 /* README.txt */; };
 		42F5A35921B740DF004713E6 /* IPCMPPrinterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F5A35821B740DF004713E6 /* IPCMPPrinterSDK.framework */; };
 		42F5A35A21B740DF004713E6 /* IPCMPPrinterSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F5A35821B740DF004713E6 /* IPCMPPrinterSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -54,7 +54,6 @@
 		423493F72118FF070088C2F2 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4258CC6820E14D2000E47038 /* ConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
 		4258CC6920E14D2000E47038 /* ConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
-		42AB95BB21F17DC200BFA6B5 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		42B7CFD120E52F17006154F9 /* ZPLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPLTableViewController.h; sourceTree = "<group>"; };
 		42B7CFD220E52F17006154F9 /* ZPLTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPLTableViewController.m; sourceTree = "<group>"; };
 		42BEF5E620E6C1E70057456D /* CPCLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPCLTableViewController.h; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		42C4F6DF2114303F004311F6 /* sample_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_2.jpg; sourceTree = "<group>"; };
 		42C4F6E02114303F004311F6 /* sample_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_3.jpg; sourceTree = "<group>"; };
 		42D6D9692177CD1800F773B1 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		42E8510B222DE0DB004475A2 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		42F5A35821B740DF004713E6 /* IPCMPPrinterSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IPCMPPrinterSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				4258CC7B20E2BFC000E47038 /* Images */,
-				42AB95BB21F17DC200BFA6B5 /* README.txt */,
+				42E8510B222DE0DB004475A2 /* README.txt */,
 				423493F72118FF070088C2F2 /* Constants.h */,
 				4230EEB420DB0E8000FB8C0B /* AppDelegate.h */,
 				4230EEB520DB0E8000FB8C0B /* AppDelegate.m */,
@@ -216,7 +216,7 @@
 				4230EEBC20DB0E8000FB8C0B /* Main.storyboard in Resources */,
 				42C4F6E32114303F004311F6 /* sample_2.jpg in Resources */,
 				42C4F6E42114303F004311F6 /* sample_3.jpg in Resources */,
-				42AB95BC21F17DC200BFA6B5 /* README.txt in Resources */,
+				42E8510C222DE0DB004475A2 /* README.txt in Resources */,
 				42C4F6E22114303F004311F6 /* sample_4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

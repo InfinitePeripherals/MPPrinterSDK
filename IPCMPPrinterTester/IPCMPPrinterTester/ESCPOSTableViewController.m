@@ -402,7 +402,7 @@
             [self qrcodeTest];
             break;
         case 7:
-            [self checkPrinterStatus];
+            [self printerStatus];
             break;
         case 8:
             [self disconnect];

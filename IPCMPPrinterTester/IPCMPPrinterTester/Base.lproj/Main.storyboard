@@ -85,7 +85,7 @@
                                     <constraint firstAttribute="height" constant="30" id="TZ7-qu-3Z0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Connect WIFI"/>
+                                <state key="normal" title="Connect Wi-Fi"/>
                                 <connections>
                                     <action selector="connectWIFI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ZD-5e-6hn"/>
                                 </connections>

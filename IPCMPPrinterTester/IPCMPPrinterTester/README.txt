@@ -10,7 +10,7 @@
 * Once you have the above items, follow these steps:
 *
 * 1) In the project's general settings, set up application signing with your Apple Developer account.
-* 1) Drag the InfineaSDK.framework into the "Embedded Binaries" section of your project's general settings.
-* 2) Paste your developer key in the Constants.h file.
+* 2) Drag the InfineaSDK.framework into the "Embedded Binaries" section of your project's general settings.
+* 3) Paste your developer key in the Constants.h file.
 *
 *******************************************************************************************************/
